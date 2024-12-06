@@ -5,6 +5,7 @@ import dotenv from"dotenv";
 // import task from "./routes/taskRoutes.js";
 import user from "./routes/userRoutes.js";
 import movies from './routes/movieRoutes.js';
+import course from './routes/couseRoutes.js'
 import connectDB from'./config/db.js';
 dotenv.config();
 app.use(express.json());
@@ -16,6 +17,8 @@ connectDB();
 // app.use('/api/task', task);
 
 app.use('/api/user', user);
+
+app.use('/api/course', course);
 
 app.use('/api/movies', movies);
 
